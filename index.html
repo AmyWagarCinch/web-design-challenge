@@ -1,64 +1,89 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-
-<h1>Amy Wagar Cinch</h1>
-<img src="https://media-exp1.licdn.com/dms/image/C4E03AQG1lFnM0OPY6Q/profile-displayphoto-shrink_200_200/0/1608678639129?e=1614816000&v=beta&t=u_Zs8btf7XWudIFswUkW4ZTmnub9PUtZlQDluTxf2f4" alt="Photo of Amy" width = "250" height = "250">
-
-<p>This is a paragraph.</p>
-
-<p>This is also a paragraph.</p>
-
-<ul>
-<li>dog</li>
-<li>cat</li>
-<li>bird</li>
-<li>fish</li>
-</ul>
+<html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <title>Regional Sales Q1</title>
+  <meta charset="UTF-8">
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <table border="1">
-   <thead>
-     <tr>
-       <th colspan="4">Favorite Things</th>
-     </tr>
-     <tr>
-       <th>Genre</th>
-       <th>Movies</th>
-       <th>Books</th>
-     </tr>
-   </thead>
-   <tbody>
-     <tr>
-       <td>Fiction</td>
-       <td>Troop Beverly Hills</td>
-       <td>The Unbearable Lightness of Being</td>
-       
-     </tr>
-     <tr>
-       <td>Non-Fiction</td>
-       <td>Idiocracy</td>
-       <td>Untamed</td>
-     </tr>
-     <tr>
-       <td>Children's</td>
-       <td>Mulan</td>
-       <td>Dear Girl</td>
-     </tr>
-    
-    
-   </tfoot>
- </table>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Latitude</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
- <iframe width="420" height="315"
- src="https://www.youtube.com/embed/XsBTHi7S220">
- </iframe>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+                
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Plots
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="temp.html">Max Temperature</a>
+            <a class="dropdown-item" href="humidity.html">Humidity</a>
+            <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+            <a class="dropdown-item" href="wind.html">Wind Speed</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="comparison.html">Comparison</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="data.html">Data</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Summary: Latitude vs. X</h1>
+      
+      <hr class="my-4">
+      <img src="Resources/assets/images/Fig1.png" alt="City Latitude vs. Max Temperature">
+      <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the Open WeatherMap API to assemble a dataset on over 500 cities.</p>
+      <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+    </div>
+  </div>
+
+<div class="container">
+  <h3 class="text-center">Visualizations</h3>
+    <div class="row">
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="Resources/assets/images/Fig1.png" alt="..." class="img-thumbnail">
+          </div>
+          
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+              <img src="Resources/assets/images/Fig2.png" alt="..." class="img-thumbnail">
+            </div>
+          
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+              <img src="Resources/assets/images/Fig3.png" alt="..." class="img-thumbnail">
+            </div>
+            
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <img src="Resources/assets/images/Fig4.png" alt="..." class="img-thumbnail">
+          </div>
+          
+      </div>
+    </div>            
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
